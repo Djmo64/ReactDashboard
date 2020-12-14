@@ -1,0 +1,205 @@
+// override bootstrap 4 variables
+
+// $blue: #2196f3;
+// $indigo: #536dfe;
+// $purple: #9c27b0;
+// $pink: #ff4081;
+// $red: #f44336;
+// $orange: #ff9800;
+// $yellow: #ffeb3b;
+// $green: #4caf50;
+// $teal: #009688;
+// $cyan: #00bcd4;
+// $white: #fff;
+$theme-colors: (
+  "primary": #1b3258,
+  "secondary":rgb(223, 114, 68),
+  "success": #45b649,
+  "danger": #f85032,
+  "warning": #ffd700,
+  "info": #00c9ff
+);
+.missingDetails{
+  display: flex;
+  width: 100%;
+  color: gray;
+  justify-content: center;
+}
+.missingDetailTop{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+}
+.missingparams{
+  display: flex;
+    justify-content: space-around;
+    width: 30%;
+    align-self: center;
+}
+.detailTabs{
+  display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid gray;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+}
+.tabNoti{
+  display: flex;
+    width: 20%;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+.tabNoti p{
+  margin-right: 5px;
+}
+.tabNoti:hover{
+  cursor: pointer;
+  background: lightgray;
+}
+.tabNoti-1{
+  display: flex;
+  justify-content: center;
+}
+.feedbackandsat{
+  display: flex;
+}
+.thanksorder{
+  text-align: center;
+}
+.delivcontainer{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    background: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+   
+}
+.detailsLayout{
+  display: flex;
+  flex-direction: column;
+}
+.orders{
+  width: 90%;
+    align-self: center;
+    padding: 10px;
+    background: lightgray;
+}
+.listitem{
+  display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid;
+}
+.section1items{
+  display: flex;
+}
+.section1items p{
+  margin: 0;
+    align-self: center;
+}
+.selectedItem{
+  width: 20px;
+    height: 20px;
+    align-self: center;
+    border: 1px solid gray;
+    margin-right: 5px;
+    background: white;
+}
+.section2items{
+  display: flex;
+    width: 28%;
+    justify-content: space-between;
+}
+.amount{
+  background: rgb(223, 114, 68);
+  border-radius: 50%;
+  height: 24px;
+  width: 22px;
+  text-align: center;
+}
+.titledashtop h2{
+  align-self: baseline;
+  text-decoration: underline;
+  font-style: italic;
+  color: #1b3258;
+  width: inherit;
+}
+.titledashtop{
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: space-between;
+  text-align: center;
+}
+.arrowup{
+  width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid gray;
+    
+}
+.subdetails{
+  background: white;
+  max-height: 350px;
+  overflow-y: scroll;
+  padding: 5px;
+}
+.k-widget.k-chat{
+  max-width: 100%;
+}
+.detailscontainer{
+  padding: 10px;
+}
+.activitycontainer{
+  display: flex;
+}
+.date{
+  flex-grow: 1;
+    border-right: 1px solid;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+.activity{
+  flex-grow: 1;
+}
+.activity textarea{
+  width: 95%;
+}
+.activitycontainer h3{
+  border-bottom: 1px solid gray;
+}
+.activitycontainer p{
+  border-bottom: 1px solid gray;
+}
+.orderdetailsactivity{
+  padding: 5px;
+  background: lightgray;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.orderdetails textarea{
+  overflow: auto;
+  resize: vertical;
+  width: 80%;
+  height: 100px;
+}
+.chatBot{
+  padding: 10px;
+}
+$enable-gradients: true;
+
+// card
+//
+$card-cap-bg: #fff;
+
+
+// sidebar
+$cr-sidebar-width: 224px;
