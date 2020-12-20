@@ -15,7 +15,7 @@ export function ManageOrders(){
     
 <div className='orderDetailstop-container'>
 <div className='orderDetailstop'>
-   <h2>Order Details</h2>
+ 
     <div className='detailTabs'>
       <div onClick={()=>setTab(0)} className='tabNoti'>
         <div className ='tabNoti-1'>

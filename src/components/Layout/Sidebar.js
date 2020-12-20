@@ -81,10 +81,9 @@ const pageContents = [
 ];
 
 const navItems = [
-  { to: '/', name: 'dashboard', exact: true, Icon: MdDashboard },
-  { to: '/cards', name: 'Manage orders', exact: false, Icon: MdWeb },
+  { to: '/', name: 'Manage orders', exact: true, Icon: MdWeb },
   { to: '/charts', name: 'Team Operations', exact: false, Icon: MdInsertChart },
-  { to: '/CampaignLocation', name: 'Campaign Location Map', exact: false, Icon: MdWidgets },
+  { to: '/CampaignLocation', name: 'Campaign Location Map', exact: false, Icon: MdDashboard },
   { to: '/Optimization', name: 'Optimization', exact: false, Icon: MdWidgets },
   { to: '/widgets', name: 'Delivered orders', exact: false, Icon: MdWidgets },
 ];

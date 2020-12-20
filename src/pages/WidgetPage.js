@@ -11,10 +11,10 @@ const WidgetPage = () => {
   return (
     <Page
       className="WidgetPage"
-      title="Widgets"
-      breadcrumbs={[{ name: 'widgets', active: true }]}
+      title="Delivered Orders"
+      breadcrumbs={[{ name: 'Orders', active: true }]}
     >
-      <Row>
+      {/* <Row>
         {numberWidgetsData.map(({ color }, index) => (
           <Col key={index} lg={4} md={6} sm={6} xs={12} className="mb-3">
             <NumberWidget
@@ -45,7 +45,7 @@ const WidgetPage = () => {
             </Col>
           )
         )}
-      </Row>
+      </Row> */}
     </Page>
   );
 };

@@ -94,8 +94,8 @@ class MainLayout extends React.Component {
         <Sidebar />
         <Content fluid onClick={this.handleContentClick}>
           <Header />
-          <ManageOrders/>
-          
+         
+          {children}
         </Content>
 
       

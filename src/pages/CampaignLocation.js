@@ -52,7 +52,7 @@ const lastWeek = new Date(
   today.getDate() - 7,
 );
 
-class DashboardPage extends React.Component {
+class CampaignLocation extends React.Component {
   componentDidMount() {
     // this is needed, because InfiniteCalendar forces window scroll
     window.scrollTo(0, 0);
@@ -65,14 +65,24 @@ class DashboardPage extends React.Component {
     return (
       <Page
       className="DashboardPage"
-      title="Manage Orders"
-      breadcrumbs={[{ name: 'Manage Orders', active: true }]}
+      title="Campaign Locations"
+      breadcrumbs={[{ name: 'Campaign Locations', active: true }]}
       >
-      <ManageOrders/>
+    
         
-           
+            <Card inverse className="bg-gradient-primary">
+              <CardHeader className="bg-gradient-primary">
+                Active Campaigns
+              </CardHeader>
+              <CardBody>
+                <MapWithBubbles />
+              </CardBody>
+            </Card>
+         
+     
       </Page>
     );
   }
 }
-export default DashboardPage;
+
+export default CampaignLocation;

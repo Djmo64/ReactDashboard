@@ -55,24 +55,23 @@ const genPieData = () => {
   return {
     datasets: [
       {
-        data: [randomNum(), randomNum(), randomNum(), randomNum(), randomNum()],
+        data: [randomNum(), randomNum(), randomNum()],
         backgroundColor: [
           getColor('primary'),
           getColor('secondary'),
-          getColor('success'),
-          getColor('info'),
-          getColor('danger'),
+          getColor('gray')
+         
         ],
         label: 'Dataset 1',
       },
     ],
-    labels: ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+    labels: ['Data 1', 'Data 2', 'Data 3'],
   };
 };
 
-const ChartPage = () => {
+const OptimizationPage = () => {
   return (
-    <Page title="Team Operations" breadcrumbs={[{ name: 'Team Operations', active: true }]}>
+    <Page title="Optimization" breadcrumbs={[{ name: 'Product Optimization', active: true }]}>
       {/* <Row>
         <Col xl={6} lg={12} md={12}>
           <Card>
@@ -91,10 +90,10 @@ const ChartPage = () => {
             </CardBody>
           </Card>
         </Col>
-      </Row>
+      </Row> */}
 
       <Row>
-        <Col xl={11} lg={} md={10}>
+        <Col xl={12} lg={12} md={12}>
           <Card>
             <CardHeader>Stacked Line</CardHeader>
             <CardBody>
@@ -149,7 +148,7 @@ const ChartPage = () => {
         </Col>
       </Row>
 
-      <Row>
+      {/* <Row>
         <Col xl={6} lg={12} md={12}>
           <Card>
             <CardHeader>Polar</CardHeader>
@@ -172,4 +171,4 @@ const ChartPage = () => {
   );
 };
 
-export default ChartPage;
+export default OptimizationPage;
