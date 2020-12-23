@@ -1,5 +1,8 @@
 // override bootstrap 4 variables
-
+@font-face{
+  src: url(../font/TrajanPro-Bold.ttf);
+  font-family: Trajan;
+}
 // $blue: #2196f3;
 // $indigo: #536dfe;
 // $purple: #9c27b0;
@@ -25,6 +28,12 @@ $theme-colors: (
   color: gray;
   justify-content: center;
 }
+.locationcharts{
+  color: #1b3258;
+}
+.sugopt{
+  color: lightgray;
+}
 .missingDetailTop{
   display: flex;
   justify-content: space-between;
@@ -47,6 +56,65 @@ $theme-colors: (
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 20px;
+}
+.taskinfo{
+  display: flex;
+    
+}
+.taskinfo p{
+  margin-left: 5px;
+  border-bottom: 1px solid lightgray;
+  margin-right: 5px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+.tasknum{
+  width: 25%;
+  border: 1px solid lightgray;
+  background: #d3d3d33d;
+}
+.Assignedtask{
+  width: 25%;
+  border: 1px solid lightgray;
+  background: #d3d3d33d;
+}
+.Status{
+  width: 25%;
+  border: 1px solid lightgray;
+  background: #d3d3d33d;
+}
+.priority{
+  width: 25%;
+  border: 1px solid lightgray;
+  background: #d3d3d33d;
+}
+.pri-sub{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid lightgray;
+  align-items: center;
+  height: 35px;
+
+}
+.pri-sub span{
+  font-size: x-large;
+}
+.pri-sub p{
+  border-bottom: none !important;
+    width: 100px;
+
+}
+.taskinfo{
+  display: flex;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    background: white;
+}
+.taskinfo h2{
+  background: gray;
+    color: white;
+    padding: 5px;
 }
 .tabNoti{
   display: flex;
@@ -82,9 +150,30 @@ $theme-colors: (
     padding: 5px;
    
 }
+.smallPW-container{
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    flex: 1 1 auto;
+    padding: 3.4px;
+}
 .detailsLayout{
   display: flex;
   flex-direction: column;
+}
+.completedgauge{
+  width: 25%;
+  border: 1px solid lightgray;
+  background: #d3d3d33d;
+}
+.completedgauge h2{
+margin-bottom: 0;
 }
 .orders{
   width: 90%;
@@ -104,6 +193,22 @@ $theme-colors: (
 .section1items p{
   margin: 0;
     align-self: center;
+}
+.section1items p:hover{
+  cursor: pointer;
+}
+
+.text-white2{
+  font-size: x-large;
+  font-family: Trajan;
+  color: white;
+}
+.createaudio{
+  margin-top: 20px;
+    border: 1px solid lightgray;
+    background: rgb(223, 114, 68);
+    color: white;
+    border-radius: 5px;
 }
 .selectedItem{
   width: 20px;

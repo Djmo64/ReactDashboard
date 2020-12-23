@@ -7,6 +7,8 @@ import SupportTicket from 'components/SupportTicket';
 import UserProgressTable from 'components/UserProgressTable';
 import { IconWidget, NumberWidget } from 'components/Widget';
 import { getStackLineChart, stackLineChartOptions } from 'demos/chartjs';
+import { Line, Pie, Doughnut, Bar, Radar, Polar } from 'react-chartjs-2';
+import { randomNum } from 'utils/demos';
 import {
   avatarsData,
   chartjs,
@@ -16,7 +18,7 @@ import {
   userProgressTableData,
 } from 'demos/dashboardPage';
 import React from 'react';
-import { Bar, Line } from 'react-chartjs-2';
+
 import {
   MdBubbleChart,
   MdInsertChart,
@@ -51,6 +53,23 @@ const lastWeek = new Date(
   today.getMonth(),
   today.getDate() - 7,
 );
+const genPieData = () => {
+  return {
+    datasets: [
+      {
+        data: [randomNum(), randomNum(), randomNum()],
+        backgroundColor: [
+          getColor('primary'),
+          getColor('secondary'),
+          getColor('gray')
+         
+        ],
+        label: 'Dataset 1',
+      },
+    ],
+    labels: ['Data 1', 'Data 2', 'Data 3'],
+  };
+};
 
 class CampaignLocation extends React.Component {
   componentDidMount() {
@@ -68,7 +87,7 @@ class CampaignLocation extends React.Component {
       title="Campaign Locations"
       breadcrumbs={[{ name: 'Campaign Locations', active: true }]}
       >
-    
+        <div className='mapcontainer'>
         
             <Card inverse className="bg-gradient-primary">
               <CardHeader className="bg-gradient-primary">
@@ -78,7 +97,43 @@ class CampaignLocation extends React.Component {
                 <MapWithBubbles />
               </CardBody>
             </Card>
-         
+            <Card inverse className="bg-gradient-primary">
+            <CardHeader className="bg-gradient-primary">
+              Map filter
+            </CardHeader>
+            <CardBody>
+
+            </CardBody>
+            </Card>
+            <Card inverse className="bg-gradient-primary">
+            <CardHeader className="bg-gradient-primary">
+              Analytics
+            </CardHeader>
+            <Row>
+            <Col xl={6} lg={12} md={12}>
+            <CardBody>
+            <Card>
+            <CardHeader className='locationcharts'>Regional statistics</CardHeader>
+            <CardBody>
+              <Polar data={genPieData()} />
+            </CardBody>
+          </Card>
+            </CardBody>
+            </Col>
+            <Col xl={6} lg={12} md={12}>
+            <CardBody>
+            <Card>
+            <CardHeader className='locationcharts'>Impression demographics</CardHeader>
+            <CardBody>
+              <Doughnut data={genPieData()} />
+            </CardBody>
+          </Card>
+            </CardBody>
+            </Col>
+            </Row>
+            </Card>
+            </div>
+        
      
       </Page>
     );

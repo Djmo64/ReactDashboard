@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Row, Col } from 'reactstrap';
 
+import { Row, Col, Card, CardHeader, CardBody } from 'reactstrap';
 import Page from 'components/Page';
 import { NumberWidget, IconWidget } from 'components/Widget';
 
@@ -14,24 +14,16 @@ const WidgetPage = () => {
       title="Delivered Orders"
       breadcrumbs={[{ name: 'Orders', active: true }]}
     >
+     
+     <Col xl={12} lg={12} md={12}>
+          <Card>
+            <CardHeader>Deliveries</CardHeader>
+            <CardBody>
+              <p className='sugopt'>There are currently no deliveries available.</p>
+            </CardBody>
+          </Card>
+        </Col>
       {/* <Row>
-        {numberWidgetsData.map(({ color }, index) => (
-          <Col key={index} lg={4} md={6} sm={6} xs={12} className="mb-3">
-            <NumberWidget
-              title="Total Profit"
-              subtitle="This month"
-              number="$17,800"
-              color={color}
-              progress={{
-                value: 75,
-                label: 'Last month',
-              }}
-            />
-          </Col>
-        ))}
-      </Row>
-
-      <Row>
         {iconWidgetsData.map(
           ({ bgColor, icon, title, subtitle, ...restProps }, index) => (
             <Col key={index} lg={4} md={6} sm={6} xs={12} className="mb-3">

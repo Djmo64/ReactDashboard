@@ -121,7 +121,7 @@ class Sidebar extends React.Component {
                 className="pr-2"
                 alt=""
               />
-              <span className="text-white">
+              <span className="text-white2">
                 Tasweiq 
               </span>
             </SourceLink>

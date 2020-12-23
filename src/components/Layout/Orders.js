@@ -6,6 +6,7 @@ import ChatBot from './ChatBot';
 export function Orders(){
     const orderlist = ["Voice Over - English(Male)", "Abu Dhabi TV Ad"]
     const [chosen,setChosen] = useState(99);
+    const [open,setOpen] = useState(false);
     const [sub, setSub] = useState(0);
     const deliv = ["quality", "price", "service", 'speed in delivery']
     return(
@@ -14,8 +15,8 @@ export function Orders(){
                 <div className='listitemdetails'>
                 <div className='listitem'>
                     <div className='section1items'>
-                    <span onClick={()=>setChosen(index)} style={chosen === index ? {background: 'rgb(223, 114, 68)'}: null} className='selectedItem'></span>
-                    <p onClick={()=>setChosen(index)}>{item}</p>
+                    <span onClick={()=>{setChosen(index); setOpen(!open)}} style={chosen === index ? {background: 'rgb(223, 114, 68)'}: null} className='selectedItem'></span>
+                    <p onClick={()=>{setChosen(index); setOpen(!open)}}>{item}</p>
                     </div>
                     <div className='section2items'>
                     <p>20th Nov</p>
@@ -26,7 +27,7 @@ export function Orders(){
                   
                 </div>
                   { 
-                    chosen === index ?
+                    chosen === index && open === true ?
                     <div className='subdetails'>
                     <div className='detailTabs'>
                     <div onClick={()=>setSub(0)} className='tabNoti'>

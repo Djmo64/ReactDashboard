@@ -16,7 +16,7 @@ const genLineData = (moreData = {}, moreData2 = {}) => {
     labels: MONTHS,
     datasets: [
       {
-        label: 'Dataset 1',
+        label: 'Campaign 1',
         backgroundColor: getColor('primary'),
         borderColor: getColor('primary'),
         borderWidth: 1,
@@ -32,7 +32,46 @@ const genLineData = (moreData = {}, moreData2 = {}) => {
         ...moreData,
       },
       {
-        label: 'Dataset 2',
+        label: 'Campaign 2',
+        backgroundColor: getColor('secondary'),
+        borderColor: getColor('secondary'),
+        borderWidth: 1,
+        data: [
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+        ],
+        ...moreData2,
+      },
+    ],
+  };
+};
+const genLineData2 = (moreData = {}, moreData2 = {}) => {
+  return {
+    labels: MONTHS,
+    datasets: [
+      {
+        label: 'Campaign 1',
+        backgroundColor: getColor('primary'),
+        borderColor: getColor('primary'),
+        borderWidth: 1,
+        data: [
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+        ],
+        ...moreData,
+      },
+      {
+        label: 'Projections',
         backgroundColor: getColor('secondary'),
         borderColor: getColor('secondary'),
         borderWidth: 1,
@@ -95,7 +134,7 @@ const OptimizationPage = () => {
       <Row>
         <Col xl={12} lg={12} md={12}>
           <Card>
-            <CardHeader>Stacked Line</CardHeader>
+            <CardHeader>CPM Comparison</CardHeader>
             <CardBody>
               <Line
                 data={genLineData()}
@@ -114,7 +153,7 @@ const OptimizationPage = () => {
                         stacked: true,
                         scaleLabel: {
                           display: true,
-                          labelString: 'Value',
+                          labelString: 'impressions',
                         },
                       },
                     ],
@@ -131,18 +170,18 @@ const OptimizationPage = () => {
       <Row>
       <Col xl={6} lg={12} md={12}>
           <Card>
-            <CardHeader>Combo Bar / Line</CardHeader>
+            <CardHeader>Campaign Projections</CardHeader>
             <CardBody>
-              <Bar data={genLineData({ type: 'line', fill: false })} />
+              <Bar data={genLineData2({ type: 'line', fill: false })} />
             </CardBody>
           </Card>
         </Col>
 
         <Col xl={6} lg={12} md={12}>
           <Card>
-            <CardHeader>Doughnut</CardHeader>
+            <CardHeader>Optimization Suggestions</CardHeader>
             <CardBody>
-              <Doughnut data={genPieData()} />
+              <p className='sugopt'>There are currently no optimization options.</p>
             </CardBody>
           </Card>
         </Col>

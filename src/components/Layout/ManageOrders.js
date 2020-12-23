@@ -17,7 +17,7 @@ export function ManageOrders(){
 <div className='orderDetailstop'>
  
     <div className='detailTabs'>
-      <div onClick={()=>setTab(0)} className='tabNoti'>
+      <div onClick={()=>{setTab(0); }} className='tabNoti'>
         <div className ='tabNoti-1'>
         <p>Active</p>
         <span className='amount'>3</span>
